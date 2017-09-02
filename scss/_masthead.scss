@@ -1,5 +1,7 @@
 // Styling for the masthead
 header.masthead {
+    min-height: 100%;
+    display: table;
     position: relative;
 
     width: 100%;
@@ -10,6 +12,11 @@ header.masthead {
     background: url('../img/bg-pattern.png'), $theme-secondary;
     background: url('../img/bg-pattern.png'), -webkit-linear-gradient(to left, $theme-secondary, $theme-tertiary);
     background: url('../img/bg-pattern.png'), linear-gradient(to left, $theme-secondary, $theme-tertiary);
+
+    .container {
+        display: table-cell;
+    }
+
     .header-content {
         max-width: 500px;
         margin-bottom: 100px;
@@ -27,12 +34,18 @@ header.masthead {
             border-radius: 3px;
         }
     }
+    @media (min-width: 768px) {
+        .header-content {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
     @media (min-width: 992px) {
-        height: 100vh;
-        min-height: 775px;
         padding-top: 0;
         padding-bottom: 0;
         .header-content {
+            margin-top: 65px;
             margin-bottom: 0;
 
             text-align: left;
