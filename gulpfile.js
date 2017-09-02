@@ -44,6 +44,14 @@ gulp.task('minify-css', ['sass'], function() {
     }))
 });
 
+// inject new css change
+gulp.task('inject-css', () =>
+  gulp.src('css/*.css')
+  .pipe(browserSync.reload({
+    stream: true
+  }))
+)
+
 // Minify custom JS
 gulp.task('minify-js', function() {
   return gulp.src('js/new-age.js')
@@ -110,7 +118,7 @@ gulp.task('browserSync', function() {
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() {
   gulp.watch('scss/*.scss', ['sass']);
-  gulp.watch('css/*.css', ['minify-css']);
+  gulp.watch('css/*.css', ['minify-css', 'inject-css']);
   gulp.watch('js/*.js', ['minify-js']);
   // Reloads the browser whenever HTML or JS files change
   gulp.watch('*.html', browserSync.reload);
