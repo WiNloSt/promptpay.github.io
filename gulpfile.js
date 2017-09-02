@@ -18,15 +18,12 @@ var banner = ['/*!\n',
 
 // Compiles SCSS files from /scss into /css
 gulp.task('sass', function() {
-  return gulp.src('scss/new-age.scss')
-    .pipe(sass())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
+  return gulp
+    .src('scss/new-age.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(header(banner, { pkg: pkg }))
     .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
+    .pipe(browserSync.reload({ stream: true }))
 });
 
 // Minify compiled CSS
