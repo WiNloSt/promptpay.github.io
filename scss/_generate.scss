@@ -1,0 +1,21 @@
+section {
+  padding: 0px;
+}
+
+#generate {
+  min-height: calc(100% - 3.5rem);
+  // display: table;
+
+  .form-group {
+    width: 400px;
+    // margin: 0 10rem;
+  }
+}
+
+.generate-content {
+  // display: table-cell;
+  margin: 0 auto;
+  height: 400px;
+  max-width: 600px;
+  box-shadow: 1px 1px 20px #888888;
+}

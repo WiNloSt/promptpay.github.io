@@ -7,24 +7,6 @@ header.masthead .header-content {
   max-width: 700px;
 }
 
-section {
-  padding: 0px;
-}
-
-#generate {
-  height: 93%;
-}
-
-.generate-section {
-  padding-top: 80px;
-}
-
-.generate-content {
-  height: 400px;
-  width: 70%;
-  box-shadow: 1px 1px 20px #888888;
-}
-
 #myBtn {
   margin-top: 20px;
   background: linear-gradient(to left, #56CCF2 , #2F80ED);
